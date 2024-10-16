@@ -1,1 +1,104 @@
-<img src="imagens/foto.jpg" alt="https://www.google.com.br/url?sa=i&url=https%3A%2F%2Fwww.techtudo.com.br%2Ftudo-sobre%2Fgmail%2F&psig=AOvVaw3lnCq5T3Q3nny_GbYpZXI-&ust=1729173646522000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCICcq_yHk4kDFQAAAAAdAAAAABAE" width="500">
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário de Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .login-container {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      width: 300px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input[type="text"], input[type="password"], input[type="tel"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    .button {
+      background-color: #0056b3;
+      color: white;
+      padding: 10px;
+      width: 100%;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .button:hover {
+      background-color: #004080;
+    }
+
+    .form-footer {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .form-footer a {
+      color: #0056b3;
+      text-decoration: none;
+    }
+
+    .form-footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <h2>Login</h2>
+    <form action="/login" method="POST">
+      <!-- CPF -->
+      <label for="cpf">CPF</label>
+      <input type="text" id="cpf" name="cpf" placeholder="Digite seu CPF" maxlength="14" required>
+
+      <!-- Telefone -->
+      <label for="telefone">Número de Telefone</label>
+      <input type="tel" id="telefone" name="telefone" placeholder="Digite seu número de telefone" pattern="[0-9]{2}-[0-9]{5}-[0-9]{4}" required>
+      
+      <!-- Senha -->
+      <label for="password">Senha</label>
+      <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+
+      <!-- Botão de Login -->
+      <button type="submit" class="button">Entrar</button>
+
+      <!-- Rodapé do formulário (Esqueci a senha, etc) -->
+      <div class="form-footer">
+        <a href="#">Esqueci minha senha</a>
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>
